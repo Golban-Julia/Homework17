@@ -1,0 +1,77 @@
+.banner{
+  position: relative;
+  border-bottom: $section-border-bottom;
+
+  &__background{
+    min-height: 570px;
+    @extend %default-bg-img;
+    background-position: center center;
+  }
+  &__content{
+    padding-top: 92px;
+    margin: $margin-center;
+    text-align: center;
+    max-width: 581px;
+    width: 100%;
+    color: $main-text-color;
+    min-height: 570px;
+  }
+  &__text{
+    position: relative;
+  }
+  &__h4 {
+    @extend %h4;
+    margin-bottom: 16px;
+  }
+  &__title{
+    @extend %title;
+    margin-bottom: 28px;
+  }
+  &__color-text{
+    @extend %font-quicksand-light;
+  }
+  &__description{
+    @extend %description;
+    max-width: 502px;
+    width: 100%;
+    margin: $margin-center;
+  }
+  &__play-button{
+    position: absolute;
+    left: 35%;
+    top: 88%;
+  }
+  &__circle {
+    position: absolute;
+    bottom: 0;
+    left:48%;
+    padding-bottom: 28px;
+
+    & a{
+      text-decoration: none;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    & .active{
+      background-color: #5283FF;
+      &:active{
+        transition: $transition;
+        background-color: $color-btn-active;
+      }
+    }
+    & .slider{
+      background-color: #D1D6E3;
+      &:hover{
+        transition: $transition;
+        background-color: #5283FF;
+      }
+      &:active{
+        transition: $transition;
+        background-color: $color-btn-active;
+      }
+    }
+  }
+}

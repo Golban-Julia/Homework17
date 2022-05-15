@@ -1,0 +1,112 @@
+.features {
+  padding: 140px 0;
+  border-bottom: $section-border-bottom;
+
+  &__background {
+    @extend %default-bg-img;
+    background-position: center center;
+  }
+
+  &__read-about {
+    margin-bottom: 92px;
+  }
+  &__h4 {
+    @extend %h4;
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    gap: 67px;
+    max-width: 761px;
+    width: 100%;
+    margin: 0 auto 92px;
+    position: relative;
+    &:after {
+      @extend %features-before-after;
+      left: 48%;
+    }
+    &:before {
+      @extend %features-before-after;
+      left: 21%;
+    }
+  }
+
+  &__wrapper {
+    width: 25%;
+    align-items: center;
+    gap: 4px;
+  }
+  .third{
+    position: relative;
+    &:before{
+      @extend %features-before-after;
+      right: -36%;
+    }
+  }
+  &__icon {
+    width: 69px;
+    height: 69px;
+  }
+
+  &__title {
+    @extend %title-md;
+  }
+
+  &__h5 {
+    @extend %h5;
+  }
+
+  &__description {
+    @extend %features-description;
+    max-width: 250px;
+    width: 100%;
+    margin: $margin-center;
+  }
+
+  &__cta {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 337px;
+    margin: $margin-center;
+  }
+
+  & .btn-secondary {
+    width: calc(100% / 3);
+    @extend %font-open-sans-semiBold;
+    text-align: center;
+  }
+
+  & .btn-primary {
+    width: calc(100% / 3);
+    @extend %font-open-sans-semiBold;
+    text-align: center;
+  }
+
+  &__or {
+    @extend %font-open-sans-semiBold;
+    color: $feature-color-text;
+    font-size: $font-size_xs;
+    line-height: 19px;
+    position: absolute;
+    top: 33%;
+    left: 47%;
+  }
+
+  &__before-after {
+    width: calc(100% / 3);
+
+    &:before {
+      @extend %feture-before-after-xs;
+      left: 58%;
+    }
+
+    &:after {
+      @extend %feture-before-after-xs;
+      right: 58%;
+    }
+  }
+}
+
+
+

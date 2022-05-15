@@ -1,0 +1,21 @@
+.customers {
+  padding: 58px 180px;
+  border-bottom: $section-border-bottom;
+
+  &__content{
+    justify-content: space-between;
+    gap: 77px;
+  }
+
+  & path:hover{
+    transition: $transition;
+    fill: #5982E7;
+  }
+  & path:active{
+    transition: $transition;
+    fill: $color-btn-active;
+  }
+
+
+
+}

@@ -1,0 +1,33 @@
+.stats{
+  @media (max-width: $breakpoint_md){
+    .row{
+      flex-wrap: wrap;
+    }
+    .direction-column {
+      align-items: center;
+    }
+    &__col{
+      width: 100%;
+      &-wrapper {
+        max-width: 576px;
+      }
+    }
+    &__col:before{
+      display: none;
+    }
+    &__productivity{
+      background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+      padding-right: 0;
+      justify-content: center;
+      p{
+        text-align: center;
+      }
+    }
+    &__application {
+      padding-left: 0;
+    }
+    &__application p{
+      text-align: center;
+    }
+  }
+}

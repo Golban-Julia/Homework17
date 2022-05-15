@@ -1,0 +1,53 @@
+.features{
+  @media (max-width: $breakpoint_lg){
+    &__block{
+      flex-wrap: wrap;
+      row-gap: 70px;
+      column-gap: 0;
+      max-width: 650px;
+      &:after{
+        display: none;
+      }
+      &:before{
+        display: none;
+      }
+    }
+    .third {
+      &:before{
+        display: none;
+      }
+    }
+    &__wrapper{
+      width: 50%;
+    }
+  }
+  @media (max-width: $breakpoint_md){
+    &{
+      padding: 90px 0;
+    }
+  }
+  @media (max-width: $breakpoint_sm){
+    &__block{
+      row-gap: 25px;
+    }
+    &__wrapper{
+      width: 100%;
+    }
+  }
+  @media (max-width: $breakpoint_xxs){
+    &__cta{
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    & .btn-secondary{
+      width: 50%;
+    }
+    & .btn-primary{
+      width: 50%;
+    }
+    &__before-after{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.plan{
+  background-color: $plan-bg-color;
+  color: $main-text-color;
+  padding-top: 170px;
+  border-bottom: $section-border-bottom;
+
+  &__info{
+    padding-left: 180px;
+  }
+
+  &__h4 {
+    @extend %h4;
+    text-align: left;
+    margin-bottom: 27px;
+  }
+  &__title{
+    @extend %font-quicksand-medium;
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 27px;
+    text-align: left;
+  }
+  &__description{
+    @extend %description;
+    margin-bottom: 47px;
+  }
+
+  &__button-video{
+    @extend %button;
+    padding: 13px 32px;
+    color: $color-white;
+    background-color: $plan-btn-bg-color;
+    box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
+    &:hover{
+      background-color: $plan-bg-color;
+      color: $plan-bg-color-btn;
+      border: 1px solid $plan-btn-border;
+      transition: $transition;
+    }
+    &:active{
+      transition: $transition;
+      background-color: $color-btn-active;
+      color: $color-white;
+    }
+  }
+  &__button-see{
+    @extend %button;
+    padding: 12px 26px;
+    color: $plan-bg-color-btn;
+    border: 1px solid $plan-btn-border;
+    background-color: $plan-bg-color;
+    &:hover{
+      background-color: $plan-btn-bg-color;
+      color: $color-white;
+      transition: $transition;
+    }
+    &:active{
+      transition: $transition;
+      background-color: $color-btn-active;
+      color:$color-white;
+    }
+  }
+
+  .triangle {
+    border-radius: 5px;
+    position: relative;
+    color: $color-white;
+    }
+
+  .triangle::after {
+    content: "";
+    position: absolute;
+    right: -19px;
+    bottom: 3px;
+    border: 5px solid transparent;
+    border-left: 6px solid $color-white;
+  }
+
+  &__img{
+    width: 653px;
+    height: 528px;
+    @extend %background-img;
+  }
+
+}

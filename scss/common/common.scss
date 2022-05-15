@@ -1,0 +1,122 @@
+body{
+  @extend %font-roboto;
+  color:$main-font-color;
+  font-size: 15px;
+}
+.container{
+  max-width: $content-width;
+  width: 100%;
+  padding: 0 $horizontal-offset;
+  margin: 0 auto;
+}
+main {
+  margin-top: $header-height;
+}
+.row{
+  display: flex;
+}
+.list-unstyled{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link-unstyled{
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+.align-items-center{
+  align-items: center;
+}
+.d-flex{
+  display: flex;
+}
+.justify-content-end{
+  justify-content: flex-end;
+}
+.direction-column {
+  flex-direction: column;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.btn {
+  @extend .link-unstyled;
+  padding: 13px 16px;
+  border-radius: 2px;
+  font-size: 13px;
+
+  &:hover {
+    transition: .3s;
+  }
+
+
+  &.btn-primary {
+    background-color: #D2E1FF;
+    color: #3A79FF;
+
+
+    &:hover {
+      background-color: #333;
+      color: $color-white;
+      transition: $transition;
+    }
+
+    &:active {
+      background-color: $color-btn-active;
+      color: $color-white;
+      transition: $transition;
+    }
+  }
+
+  &.btn-secondary{
+    background-color: #FFD7D7;
+    color: #D43F3F;
+    &:hover {
+      background-color: #333;
+      color: $color-white;
+      transition: $transition;
+    }
+    &:active {
+      background-color: $color-btn-active;
+      color: $color-white;
+      transition: $transition;
+    }
+  }
+
+
+  &.btn-sm{
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width:$content-width){
+  .container{
+    max-width:$breakpoint_xlg;
+  }
+}
+@media (max-width:$breakpoint_xlg){
+  .container{
+    max-width:$breakpoint_lg;
+  }
+}
+@media (max-width:$breakpoint_lg){
+  .container{
+    max-width:$breakpoint_md;
+  }
+}
+@media (max-width:$breakpoint_md){
+  .container{
+    max-width:$breakpoint_sm;
+  }
+}
+@media (max-width:$breakpoint_sm){
+  .container{
+    max-width:$breakpoint_xs;
+  }
+}
+@media (max-width:$breakpoint_xs){
+  .container{
+    max-width:$breakpoint_xxs;
+  }
+}

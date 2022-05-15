@@ -1,0 +1,136 @@
+%font-roboto{
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+%font-roboto-normal{
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+}
+%font-quicksand-medium{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+%font-quicksand-bold{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+%font-quicksand-regular{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+}
+%font-quicksand-light{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+%font-open-sans-bold{
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+%font-open-sans-semiBold{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+%h4{
+  @extend %font-roboto;
+  text-transform: uppercase;
+  font-size: $font-size_xxs;
+  color: $main-text-color;
+  text-align: center;
+}
+%title{
+  @extend %font-quicksand-medium;
+  font-size: $font-size_xlg;
+  line-height: 60px;
+}
+%title-md{
+  @extend %font-quicksand-medium;
+  font-size: $font-size_lg;
+  line-height: 30px;
+  color: $main-text-color;
+  text-align: center;
+}
+%description {
+  @extend %font-roboto-normal;
+  color: $main-font-color;
+  line-height: 29px;
+  letter-spacing: $letter-spacing;
+}
+%button{
+  @extend %font-open-sans-bold;
+  font-size: 13px;
+  line-height: 16px;
+}
+%background-img{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+%default-bg-img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+%h5{
+  @extend %font-open-sans-bold;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #4074F8;
+}
+%features-description{
+  @extend %font-open-sans-semiBold;
+  font-size: $font-size_xs;
+  line-height: 19px;
+  text-align: center;
+  color: $feature-color-text;
+}
+%hr{
+  display: inline-block;
+  background-color: #DAE4FE;
+  border: none;
+  width: 15px;
+  height: 2px;
+}
+
+%stats-description{
+  @extend %font-quicksand-medium;
+  font-size: $font-size_md;
+  line-height: 23px;
+  letter-spacing: $letter-spacing;
+}
+%stats-number{
+  @extend %font-quicksand-regular;
+  font-size: $font-size_xlg;
+  line-height: 83px;
+  letter-spacing: $letter-spacing;
+}
+%features-before-after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 55%;
+  width: 28px;
+  height: 1px;
+  background-color: $bg-color-hr;
+}
+%feture-before-after-xs{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 2px;
+  background-color: $bg-color-hr;
+}
+
+
+

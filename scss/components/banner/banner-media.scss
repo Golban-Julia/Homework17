@@ -1,0 +1,12 @@
+.banner {
+  @media (max-width: $breakpoint_xs) {
+    &__play-button {
+      position: initial;
+      margin: $margin-center;
+    }
+    &__circle {
+      position: initial;
+      margin: $margin-center;
+    }
+  }
+}
