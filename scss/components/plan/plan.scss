@@ -1,85 +1,78 @@
 .plan{
-  background-color: $plan-bg-color;
-  color: $main-text-color;
+  %button{
+    @extend %font-quicksand-bold;
+    font-size: 13px;
+    line-height: 16px;
+    box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
+    border: 1px solid;
+  }
+
+  $plan-btn-bg-color:#4C85FF;
+  $plan-bg-color-btn: #ADB4D2;
+
+  background-color: $section-bg-color;
   padding-top: 170px;
   border-bottom: $section-border-bottom;
 
   &__info{
-    padding-left: 180px;
-  }
+    margin-left: 180px;
+    width: 50%;
+    gap: 47px;
 
-  &__h4 {
-    @extend %h4;
-    text-align: left;
-    margin-bottom: 27px;
-  }
-  &__title{
-    @extend %font-quicksand-medium;
-    font-size: 36px;
-    line-height: 45px;
-    margin-bottom: 27px;
-    text-align: left;
-  }
-  &__description{
-    @extend %description;
-    margin-bottom: 47px;
-  }
-
-  &__button-video{
-    @extend %button;
-    padding: 13px 32px;
-    color: $color-white;
-    background-color: $plan-btn-bg-color;
-    box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
-    &:hover{
-      background-color: $plan-bg-color;
-      color: $plan-bg-color-btn;
-      border: 1px solid $plan-btn-border;
-      transition: $transition;
+    & .plan__text-centre{
+      gap: 20px;
     }
-    &:active{
-      transition: $transition;
-      background-color: $color-btn-active;
-      color: $color-white;
+    h6 {
+      @extend %h6;
+    }
+    h2{
+      @extend %h2;
+    }
+    span {
+      @extend %h2;
+      @extend %font-quicksand-regular;
+    }
+    p {
+      @extend %description;
     }
   }
-  &__button-see{
-    @extend %button;
-    padding: 12px 26px;
-    color: $plan-bg-color-btn;
-    border: 1px solid $plan-btn-border;
-    background-color: $plan-bg-color;
-    &:hover{
-      background-color: $plan-btn-bg-color;
-      color: $color-white;
-      transition: $transition;
+  & .plan__button {
+    & .plan__button-video{
+      @include plan-btn($color-white, $plan-btn-bg-color, $plan-btn-bg-color);
+      position: relative;
+      padding: 12px 28px;
+      &:hover {
+        color: $plan-bg-color-btn;
+        background-color: $color-white;
+        border-color: #D1D1E4 ;
+      }
+      &:active {
+        color: $color-white;
+        background-color: $color-btn-active;
+        border-color: #D1D1E4 ;
+      }
     }
-    &:active{
-      transition: $transition;
-      background-color: $color-btn-active;
-      color:$color-white;
+    & .plan__button-see{
+      @include plan-btn($plan-bg-color-btn, $color-white, #D1D1E4);
+      padding: 12px 22px;
+      &:hover {
+        color: $color-white;
+        background-color: $plan-btn-bg-color;
+        border-color: $plan-btn-bg-color;
+      }
+      &:active {
+        color: $color-white;
+        background-color: $color-btn-active;
+        border-color: #D1D1E4 ;
+      }
+    }
+    & img{
+      position: absolute;
+      transform: translate( 80px, -10px);
     }
   }
 
-  .triangle {
-    border-radius: 5px;
-    position: relative;
-    color: $color-white;
-    }
-
-  .triangle::after {
-    content: "";
-    position: absolute;
-    right: -19px;
-    bottom: 3px;
-    border: 5px solid transparent;
-    border-left: 6px solid $color-white;
-  }
-
-  &__img{
-    width: 653px;
-    height: 528px;
-    @extend %background-img;
-  }
-
+&__illustration{
+  margin-right: -65px;
+}
 }

@@ -1,20 +1,25 @@
 .customers {
-  padding: 58px 180px;
+  padding: 58px 0;
   border-bottom: $section-border-bottom;
 
   &__content{
-    justify-content: space-between;
+    margin: 0 180px;
     gap: 77px;
+
+    svg{
+      cursor: pointer;
+      & path:hover{
+        transition: $transition;
+        fill: #5982E7;
+      }
+      & path:active{
+        transition: $transition;
+        fill: $color-btn-active;
+      }
+    }
   }
 
-  & path:hover{
-    transition: $transition;
-    fill: #5982E7;
-  }
-  & path:active{
-    transition: $transition;
-    fill: $color-btn-active;
-  }
+
 
 
 

@@ -1,77 +1,94 @@
-.banner{
+.banner {
+  $banner-height: calc(100vh - #{$header-height});
+
+  background-image: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+  height: $banner_height;
   position: relative;
-  border-bottom: $section-border-bottom;
+  z-index: 1;
+  padding: 20vh 0 0;
+  min-height: 475px;
 
-  &__background{
-    min-height: 570px;
-    @extend %default-bg-img;
-    background-position: center center;
-  }
-  &__content{
-    padding-top: 92px;
-    margin: $margin-center;
-    text-align: center;
-    max-width: 581px;
+  &:before {
+    background-size: cover;
+    content: '';
+    display: block;
     width: 100%;
-    color: $main-text-color;
-    min-height: 570px;
-  }
-  &__text{
-    position: relative;
-  }
-  &__h4 {
-    @extend %h4;
-    margin-bottom: 16px;
-  }
-  &__title{
-    @extend %title;
-    margin-bottom: 28px;
-  }
-  &__color-text{
-    @extend %font-quicksand-light;
-  }
-  &__description{
-    @extend %description;
-    max-width: 502px;
-    width: 100%;
-    margin: $margin-center;
-  }
-  &__play-button{
+    height: $banner_height;
+    min-height: 475px;
     position: absolute;
-    left: 35%;
-    top: 88%;
+    top: 0;
+    background-image: url('../assets/img/clouds.svg');
+    z-index: -1;
   }
-  &__circle {
-    position: absolute;
-    bottom: 0;
-    left:48%;
-    padding-bottom: 28px;
 
-    & a{
-      text-decoration: none;
-      display: inline-block;
-      width: 8px;
-      height: 8px;
+  &:after {
+    background-size: cover;
+    content: '';
+    display: block;
+    width: 100%;
+    height: $banner_height;
+    min-height: 475px;
+    position: absolute;
+    top: 0;
+    @extend %background-img;
+    background-image: url('../assets/img/hero-image.svg');
+    z-index: -2;
+  }
+
+  &__content {
+    gap: 20px;
+
+    h6 {
+      @extend %h6;
+      margin: 0;
+    }
+
+    h1 {
+      @extend %h1;
+
+      & .banner__color-text {
+        @extend %h1;
+        @extend %font-quicksand-light;
+      }
+    }
+
+    p {
+      max-width: 502px;
+      margin: 0 auto;
+    }
+
+
+  }
+
+  &__play {
+    a {
+      cursor: pointer;
+      width: 52px;
+      height: 52px;
+      background-color: white;
       border-radius: 50%;
-    }
+      box-shadow: 0 10px 50px rgba(201, 209, 231, 0.6);
 
-    & .active{
-      background-color: #5283FF;
-      &:active{
-        transition: $transition;
-        background-color: $color-btn-active;
+      &:hover {
+        background-color: #6888FF;
+
+        path {
+          fill: #E9EFFF
+        }
+
+        transition: .3s;
       }
     }
-    & .slider{
-      background-color: #D1D6E3;
-      &:hover{
-        transition: $transition;
-        background-color: #5283FF;
-      }
-      &:active{
-        transition: $transition;
-        background-color: $color-btn-active;
-      }
+  }
+
+  &__dots {
+   @extend %dots;
+  }
+
+  &__dot {
+    @extend %dot;
+    &-active {
+      background-color: #5283FF;
     }
   }
 }

@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   z-index: 15;
   width: 100%;
   top:0;
@@ -77,7 +77,7 @@
   }
   & path:hover{
     transition: $transition;
-    fill: $plan-bg-color;
+    fill: #6188FF;
   }
   & path:active{
     transition: $transition;

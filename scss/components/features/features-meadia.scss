@@ -5,6 +5,9 @@
       row-gap: 70px;
       column-gap: 0;
       max-width: 650px;
+      & .features__wrapper{
+        width: 50%;
+      }
       &:after{
         display: none;
       }
@@ -20,6 +23,7 @@
     &__wrapper{
       width: 50%;
     }
+
   }
   @media (max-width: $breakpoint_md){
     &{
@@ -29,23 +33,25 @@
   @media (max-width: $breakpoint_sm){
     &__block{
       row-gap: 25px;
+      & .features__wrapper{
+        width: 100%;
+      }
     }
-    &__wrapper{
-      width: 100%;
-    }
+
   }
-  @media (max-width: $breakpoint_xxs){
+  @media (max-width: $breakpoint_xs){
     &__cta{
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
     }
-    & .btn-secondary{
+    a.btn.btn-secondary {
       width: 50%;
     }
-    & .btn-primary{
+    a.btn.btn-primary{
       width: 50%;
     }
+
     &__before-after{
       display: none;
     }

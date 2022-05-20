@@ -1,10 +1,11 @@
 .customers{
   @media (max-width: $content-width){
     &{
-      padding: 50px 120px;
+      padding: 50px 50px;
     }
     &__content{
       gap:40px;
+      margin: 0;
     }
   }
   @media (max-width: $breakpoint_lg){
@@ -15,9 +16,14 @@
       flex-wrap: wrap;
       gap: 10px;
       justify-content: space-around;
+      svg{
+        width: calc(100% / 4);
+      }
     }
-    &__svg{
-      width: calc(100% / 4);
+  }
+  @media (max-width: $breakpoint_xs){
+    svg{
+      width: calc(100% / 3);
     }
   }
 

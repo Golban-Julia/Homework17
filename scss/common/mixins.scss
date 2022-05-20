@@ -26,3 +26,20 @@
     transition: $transition;
   }
 }
+
+@mixin plan-btn($color, $bg-color, $border-color ){
+  @extend %button;
+  color: $color;
+  background-color: $bg-color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color ;
+  }
+  &:active {
+    color: $color;
+    background-color: $bg-color;
+  }
+}

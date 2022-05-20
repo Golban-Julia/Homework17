@@ -1,7 +1,5 @@
 body{
-  @extend %font-roboto;
-  color:$main-font-color;
-  font-size: 15px;
+  @extend %description;
 }
 .container{
   max-width: $content-width;
@@ -31,6 +29,12 @@ main {
 .d-flex{
   display: flex;
 }
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
 .justify-content-end{
   justify-content: flex-end;
 }
@@ -40,11 +44,20 @@ main {
 .align-items-end {
   align-items: flex-end;
 }
+.text-center {
+  text-align: center;
+}
+h6{
+  margin: 0;
+}
+
 .btn {
   @extend .link-unstyled;
+  @extend %font-quicksand-bold;
   padding: 13px 16px;
   border-radius: 2px;
   font-size: 13px;
+  line-height: 16px;
 
   &:hover {
     transition: .3s;
@@ -84,11 +97,11 @@ main {
     }
   }
 
-
   &.btn-sm{
     padding: 10px 20px;
   }
 }
+
 
 @media (max-width:$content-width){
   .container{

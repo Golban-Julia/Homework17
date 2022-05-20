@@ -11,10 +11,10 @@
     }
   }
 
-  @media (max-width: $breakpoint_lg) {
+  @media (max-width: $breakpoint_xlg){
     &__main-menu {
       ul {
-        gap: 13px;
+        gap: 10px;
       }
     }
   }
@@ -61,6 +61,11 @@
         color: $accent-color;
         font-size: $font_size_md;
       }
+    }
+  }
+  @media (max-width: $breakpoint_sm){
+    &{
+      position: absolute;
     }
   }
   
