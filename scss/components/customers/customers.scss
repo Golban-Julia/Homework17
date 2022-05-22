@@ -14,13 +14,8 @@
       }
       & path:active{
         transition: $transition;
-        fill: $color-btn-active;
+        fill: map-get($colors, color-btn-active);
       }
     }
   }
-
-
-
-
-
 }

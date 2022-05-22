@@ -3,7 +3,7 @@
   z-index: 15;
   width: 100%;
   top:0;
-  background-color: $color-white;
+  background-color: map-get($colors, color-white);
   border-bottom: $section-border-bottom;
   min-height: $header-height;
 
@@ -15,10 +15,6 @@
     display: none;
   }
 
-  .row {
-    justify-content: space-between;
-  }
-
   &__col{
     width:50%;
   }
@@ -28,7 +24,7 @@
   }
   &__logo {
     a {
-      @include a-style('bg', $accent-color, black, indianred);
+      @include a-style('bg', map-get($colors, accent-color), black, map-get($colors, color-btn-active));
       text-decoration: none;
       display: inline-block;
       width: 26px;
@@ -53,7 +49,7 @@
       }
     }
     a {
-      @include a-style('color', $text-color, $accent-color, indianred);
+      @include a-style('color', map-get($colors, text-color), map-get($colors, accent-color), map-get($colors, color-btn-active));
       text-decoration: none;
     }
   }
@@ -81,7 +77,7 @@
   }
   & path:active{
     transition: $transition;
-    fill: $color-btn-active;
+    fill: map-get($colors, color-btn-active);
   }
 
   &__cta{

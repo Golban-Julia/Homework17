@@ -1,19 +1,6 @@
 .stats{
-  %stats-description{
-    @extend %font-quicksand-medium;
-    font-size: $font-size_md;
-    line-height: 23px;
-    letter-spacing: $letter-spacing;
-  }
-  %stats-number{
-    @extend %font-quicksand-regular;
-    font-size: $font-size_xlg;
-    line-height: 83px;
-    letter-spacing: $letter-spacing;
-  }
-
   @extend %font-quicksand-medium;
-  font-size: $font-size_md;
+  font-size: map-get($font_sizes, font-size_md);
   $col-padding: 90px;
   overflow-x: hidden;
   color: white;
@@ -23,12 +10,10 @@
     width: 50%;
     padding: 66px 0;
     position: relative;
-
     &-wrapper {
       max-width: 260px;
       z-index: 10;
     }
-
     &:before {
       content: '';
       display: block;
@@ -41,7 +26,6 @@
 
   &__productivity{
     padding-right: $col-padding;
-
     p{
       text-align: right;
     }
@@ -71,7 +55,7 @@
     @extend %font-quicksand-regular;
     line-height: 83px;
     margin-bottom: 25px;
-    font-size: $font-size_xlg;
+    font-size: map-get($font_sizes, font-size_xlg);
     letter-spacing: $letter-spacing;
   }
 

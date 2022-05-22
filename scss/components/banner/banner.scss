@@ -44,10 +44,9 @@
     }
 
     h1 {
-      @extend %h1;
-
+      @include title( map-get($font_sizes, font-size_xlg), 60px)
+      }
       & .banner__color-text {
-        @extend %h1;
         @extend %font-quicksand-light;
       }
     }
@@ -58,14 +57,14 @@
     }
 
 
-  }
+
 
   &__play {
     a {
       cursor: pointer;
       width: 52px;
       height: 52px;
-      background-color: white;
+      background-color: map-get($colors, color-white);
       border-radius: 50%;
       box-shadow: 0 10px 50px rgba(201, 209, 231, 0.6);
 

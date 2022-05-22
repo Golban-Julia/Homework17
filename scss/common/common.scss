@@ -2,7 +2,7 @@ body{
   @extend %description;
 }
 .container{
-  max-width: $content-width;
+  max-width: map-get($breakpoints, xxl);
   width: 100%;
   padding: 0 $horizontal-offset;
   margin: 0 auto;
@@ -71,13 +71,13 @@ h6{
 
     &:hover {
       background-color: #333;
-      color: $color-white;
+      color: map-get($colors, color-white);
       transition: $transition;
     }
 
     &:active {
-      background-color: $color-btn-active;
-      color: $color-white;
+      background-color: map-get($colors, color-btn-active);
+      color: map-get($colors, color-white);
       transition: $transition;
     }
   }
@@ -87,12 +87,12 @@ h6{
     color: #D43F3F;
     &:hover {
       background-color: #333;
-      color: $color-white;
+      color: map-get($colors, color-white);
       transition: $transition;
     }
     &:active {
-      background-color: $color-btn-active;
-      color: $color-white;
+      background-color: map-get($colors, color-btn-active);
+      color: map-get($colors, color-white);
       transition: $transition;
     }
   }
@@ -103,33 +103,29 @@ h6{
 }
 
 
-@media (max-width:$content-width){
+@media (max-width:map-get($breakpoints, xxl)) {
   .container{
-    max-width:$breakpoint_xlg;
+    max-width:map-get($breakpoints, lg);
   }
 }
-@media (max-width:$breakpoint_xlg){
+@media (max-width:map-get($breakpoints, lg)) {
   .container{
-    max-width:$breakpoint_lg;
+    max-width:map-get($breakpoints, md);
   }
 }
-@media (max-width:$breakpoint_lg){
+@media (max-width:map-get($breakpoints, md)) {
   .container{
-    max-width:$breakpoint_md;
+    max-width:map-get($breakpoints, sm);
   }
 }
-@media (max-width:$breakpoint_md){
+@media (max-width:map-get($breakpoints, sm)){
   .container{
-    max-width:$breakpoint_sm;
+    max-width:map-get($breakpoints, xs);
   }
 }
-@media (max-width:$breakpoint_sm){
+@media (max-width:map-get($breakpoints, xs)){
   .container{
-    max-width:$breakpoint_xs;
+    max-width:map-get($breakpoints, xxs);
   }
 }
-@media (max-width:$breakpoint_xs){
-  .container{
-    max-width:$breakpoint_xxs;
-  }
-}
+

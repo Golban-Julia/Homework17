@@ -1,16 +1,10 @@
 .plan{
-  %button{
-    @extend %font-quicksand-bold;
-    font-size: 13px;
-    line-height: 16px;
-    box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
-    border: 1px solid;
-  }
+
 
   $plan-btn-bg-color:#4C85FF;
   $plan-bg-color-btn: #ADB4D2;
 
-  background-color: $section-bg-color;
+  background-color: map-get($colors, section-bg-color);
   padding-top: 170px;
   border-bottom: $section-border-bottom;
 
@@ -26,10 +20,9 @@
       @extend %h6;
     }
     h2{
-      @extend %h2;
+      @include title(map-get($font_sizes, font-size_lg), 45px)
     }
     span {
-      @extend %h2;
       @extend %font-quicksand-regular;
     }
     p {
@@ -38,31 +31,31 @@
   }
   & .plan__button {
     & .plan__button-video{
-      @include plan-btn($color-white, $plan-btn-bg-color, $plan-btn-bg-color);
+      @include plan-btn(map-get($colors, color-white), $plan-btn-bg-color, $plan-btn-bg-color);
       position: relative;
       padding: 12px 28px;
       &:hover {
         color: $plan-bg-color-btn;
-        background-color: $color-white;
+        background-color: map-get($colors, color-white);
         border-color: #D1D1E4 ;
       }
       &:active {
-        color: $color-white;
-        background-color: $color-btn-active;
+        color: map-get($colors, color-white);
+        background-color: map-get($colors, color-btn-active);
         border-color: #D1D1E4 ;
       }
     }
     & .plan__button-see{
-      @include plan-btn($plan-bg-color-btn, $color-white, #D1D1E4);
+      @include plan-btn($plan-bg-color-btn, map-get($colors, color-white), #D1D1E4);
       padding: 12px 22px;
       &:hover {
-        color: $color-white;
+        color: map-get($colors, color-white);
         background-color: $plan-btn-bg-color;
         border-color: $plan-btn-bg-color;
       }
       &:active {
-        color: $color-white;
-        background-color: $color-btn-active;
+        color: map-get($colors, color-white);
+        background-color: map-get($colors, color-btn-active);
         border-color: #D1D1E4 ;
       }
     }

@@ -1,10 +1,9 @@
 .features{
-  @media (max-width: $breakpoint_lg){
+  @include laptop (){
     &__block{
       flex-wrap: wrap;
       row-gap: 70px;
       column-gap: 0;
-      max-width: 650px;
       & .features__wrapper{
         width: 50%;
       }
@@ -23,35 +22,31 @@
     &__wrapper{
       width: 50%;
     }
-
   }
-  @media (max-width: $breakpoint_md){
+  @include tablet(){
     &{
       padding: 90px 0;
     }
   }
-  @media (max-width: $breakpoint_sm){
+  @include mobile-small(){
     &__block{
       row-gap: 25px;
       & .features__wrapper{
         width: 100%;
       }
     }
-
-  }
-  @media (max-width: $breakpoint_xs){
     &__cta{
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
+      max-width: 282px;
     }
     a.btn.btn-secondary {
-      width: 50%;
+      width: 100%;
     }
     a.btn.btn-primary{
-      width: 50%;
+      width: 100%;
     }
-
     &__before-after{
       display: none;
     }

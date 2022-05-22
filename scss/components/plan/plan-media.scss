@@ -1,5 +1,5 @@
 .plan{
-  @media (max-width: $content-width){
+  @include larger_screen(){
     &{
       padding-top: 100px;
     }
@@ -8,60 +8,65 @@
     }
   }
 
-  @media (max-width: $breakpoint_xlg){
+  @include desktop(){
     &{
-      padding: 100px;
+      padding-bottom: 100px;
     }
     & .row{
       flex-wrap: wrap;
       flex-direction: column-reverse;
     }
-   &__info{
-     align-items: center;
-     width: 100%;
-     & .plan__text-centre{
-       align-items: center;
-       text-align: center;
-     }
-   }
+    &__info{
+      align-items: center;
+      width: 100%;
+      & .plan__text-centre{
+        align-items: center;
+        text-align: center;
+      }
+    }
     &__illustration{
       margin-right: 80px;
       max-height: 540px;
     }
   }
-  @media (max-width: $breakpoint_md) {
+  @include tablet(){
     &__illustration {
       margin-right: 35px;
     }
   }
-  @media (max-width: $breakpoint_sm) {
+  @include mobile-small(){
     &__button{
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+    &__button-video{
+      width: 100%;
+    }
+    & .plan__button-video img{
+      transform: translate(160px, -10px);
+    }
+    &__button-see{
+      width: 100%;
+    }
     &__illustration {
       display: none;
     }
   }
-  @media (max-width: $breakpoint_xs){
+  @include mobile(){
     &__info {
       h2 {
         font-size: 28px;
       }
-
       span {
         font-size: 28px;
       }
-
       p {
         font-size: 13px;
       }
-
       & .triangle {
         display: none;
       }
     }
   }
-
 }

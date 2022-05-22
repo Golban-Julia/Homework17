@@ -1,36 +1,40 @@
 $horizontal-offset: 15px;
-$content-width: 1210px + ($horizontal-offset * 2);
-$breakpoint_xlg: 1024px;
-$breakpoint_lg: 850px;
-$breakpoint_md: 767px;
-$breakpoint_sm: 576px;
-$breakpoint_xs: 480px;
-$breakpoint_xxs: 400px;
-
-$main-font-color: #8D96BD;
-$accent-color: #5E81FE;
-$text-color: #697CA6;
-$main-text-color: #3D4F9F;
-$sub_menu_bg: #D2E1FF;
-$section-bg-color: #F5F8FF;
-$color-white: #FFFFFF;
-$color-btn-active: indianred;
-$bg-color-hr: #DAE4FE;
-$feature-color-text: #ADB3CB;
-
-
-
-$font-size_xxs: 10px;
-$font-size_xs: 11px;
-$font-size_sm: 18px;
-$font-size_md: 24px;
-$font-size_lg: 36px;
-$font-size_xlg: 48px;
 $letter-spacing: 0.03em;
-
 $transition: .3s;
 $section-border-bottom: 2px solid #D8E3FE;
 $margin-center: 0 auto;
-
 $header-height: 87px;
+
+$breakpoints: (
+    xxl: 1210px + ($horizontal-offset * 2),
+    lg: 1024px,
+    md: 850px,
+    sm: 767px,
+    xs: 576px,
+    xxs: 480px,
+);
+
+$colors: (
+    main-font-color: #8D96BD,
+    accent-color: #5E81FE,
+    text-color: #697CA6,
+    main-text-color: #3D4F9F,
+    sub_menu_bg: #D2E1FF,
+    section-bg-color: #F5F8FF,
+    color-white: #FFFFFF,
+    color-btn-active: indianred,
+    bg-color-hr: #DAE4FE,
+    feature-color-text: #ADB3CB,
+);
+
+$font_sizes: (
+    font-size_xxs: 10px,
+    font-size_xs: 11px,
+    font-size_sm: 18px,
+    font-size_md: 24px,
+    font-size_lg: 36px,
+    font-size_xlg: 48px,
+);
+
+
 

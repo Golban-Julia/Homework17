@@ -1,25 +1,24 @@
 .header {
-  @media (min-width: $breakpoint_md) {
+  @include tablet(min){
     label {
       display: none;
     }
   }
-
-  @media (min-width: $breakpoint_xs) {
+  @include mobile(min){
     .visible-xs {
       display: none;
     }
   }
 
-  @media (max-width: $breakpoint_xlg){
+  @include larger_screen(){
     &__main-menu {
       ul {
-        gap: 10px;
+        gap: 25px;
       }
     }
   }
 
-  @media (max-width: $breakpoint_md) {
+  @include tablet(){
     &__wrapper{
       position: relative;
     }
@@ -50,7 +49,7 @@
         width: 100%;
         left: 0;
         top: 100%;
-        background-color: $sub_menu_bg;
+        background-color: map-get($colors, sub_menu_bg);
       }
       li{
         text-align: center;
@@ -58,18 +57,13 @@
       }
 
       a{
-        color: $accent-color;
-        font-size: $font_size_md;
+        color: map-get($colors, accent-color);
+        font-size: map-get($font_sizes, font_size_md);
       }
     }
   }
-  @media (max-width: $breakpoint_sm){
-    &{
-      position: absolute;
-    }
-  }
-  
-  @media (max-width: $breakpoint_xs) {
+
+  @include mobile(){
     &{
       padding-top: 22px;
     }
@@ -80,5 +74,4 @@
       display: list-item;
     }
   }
-
 }

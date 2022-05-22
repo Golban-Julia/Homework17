@@ -1,6 +1,6 @@
 .stats{
-  @media (max-width: $breakpoint_md){
-    .row{
+  @include tablet(){
+    &__content{
       flex-wrap: wrap;
     }
     .direction-column {
