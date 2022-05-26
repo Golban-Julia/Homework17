@@ -1,0 +1,9 @@
+.questions{
+  @include tablet(){
+    padding: 100px 0;
+    & .questions__accord-body{
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

@@ -70,30 +70,23 @@ h6{
 
 
     &:hover {
-      background-color: #333;
-      color: map-get($colors, color-white);
-      transition: $transition;
+     @extend %btn-hover;
     }
 
     &:active {
-      background-color: map-get($colors, color-btn-active);
-      color: map-get($colors, color-white);
-      transition: $transition;
+      @extend %btn-active;
     }
   }
+
 
   &.btn-secondary{
     background-color: #FFD7D7;
     color: #D43F3F;
     &:hover {
-      background-color: #333;
-      color: map-get($colors, color-white);
-      transition: $transition;
+      @extend %btn-hover;
     }
     &:active {
-      background-color: map-get($colors, color-btn-active);
-      color: map-get($colors, color-white);
-      transition: $transition;
+      @extend %btn-active;
     }
   }
 
@@ -101,7 +94,16 @@ h6{
     padding: 10px 20px;
   }
 }
+.dots {
+  @extend %dots;
+}
 
+.dot {
+  @extend %dot;
+  &-active {
+    background-color: #5283FF;
+  }
+}
 
 @media (max-width:map-get($breakpoints, xxl)) {
   .container{

@@ -1,0 +1,40 @@
+.footer{
+  @include desktop(){
+    &__col-left{
+      gap:40px;
+    }
+    &__menu {
+      gap: 20px;
+    }
+    &__col-right{
+      gap: 25px;
+    }
+    &__social{
+      gap: 18px;
+    }
+  }
+@include tablet(){
+  padding: 50px 0;
+  &__content{
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  &__col-left{
+    gap:8px;
+    width: 100%;
+    justify-content: center;
+  }
+  &__menu {
+    gap: 8px;
+  }
+  &__col-right{
+    width: 100%;
+    justify-content: center;
+  }
+  &__copyright {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+}

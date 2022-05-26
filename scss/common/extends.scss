@@ -32,7 +32,24 @@
 }
 
 
+%btn-hover{
+  background-color: #333;
+  color: map-get($colors, color-white);
+  transition: $transition;
+}
+%btn-active{
+  background-color: map-get($colors, color-btn-active);
+  color: map-get($colors, color-white);
+  transition: $transition;
+}
 
+
+%foter-header-text{
+  @extend %font-quicksand-medium;
+  font-size: 12px;
+  line-height: 15px;
+  color:map-get($colors, text-color);
+}
 %h6{
   @extend %font-roboto;
   text-transform: uppercase;
@@ -51,6 +68,13 @@
   @extend %font-roboto-normal;
   color: map-get($colors, main-font-color);
   line-height: 29px;
+  letter-spacing: $letter-spacing;
+  font-size: 15px;
+}
+
+%description-font-size14{
+  @extend %font-roboto-normal;
+  font-size: map-get($font_sizes, font-sixe_x);
   letter-spacing: $letter-spacing;
 }
 
@@ -112,21 +136,15 @@
   @extend %font-quicksand-bold;
   line-height: 16px;
 }
-%features-before-after{
+
+%before-after{
   content: "";
   display: block;
   position: absolute;
-  top: 55%;
-  width: 28px;
-  height: 1px;
-  background-color: map-get($colors, bg-color-hr);
 }
-%feture-before-after-xs{
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 15px;
+
+%feature-before-after{
+  @extend %before-after;
   height: 1px;
   background-color: map-get($colors, bg-color-hr);
 }
@@ -142,12 +160,47 @@
   line-height: 83px;
   letter-spacing: $letter-spacing;
 }
+%cursor_glass{
+  width: 65px;
+  height: 65px;
+  background-color: map-get($colors, color-white);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
 %blog-arrow{
+  top: 50%;
   width: 23px;
   height: 15px;
   position: absolute;
-  top: 55%;
+}
+%blog-img-hover{
+  opacity: 1;
+  transition: $transition;
 }
 
+%started-button-left{
+  color: #565F82;
+  background: map-get($colors, color-white);
+  box-shadow: 0 5px 15px #6480E8;
+  border: 1px solid map-get($colors, color-white);
+}
+%started-button-right{
+  color: #C7D3FF;
+  border: 1px solid #A0B4FF;
+  background-color: #6888FF;
+}
+%started-btn-active{
+  background-color: map-get($colors, color-btn-active);
+  color: map-get($colors, color-white);
+  transition: $transition;
+  border: 1px solid map-get($colors, color-btn-active);
+}
+
+%newsletter-btn{
+  @extend %font-quicksand-bold;
+  font-size: 13px;
+  line-height: 16px;
+}
 
 

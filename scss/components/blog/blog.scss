@@ -1,0 +1,133 @@
+.blog{
+
+  border-bottom: $section-border-bottom;
+  position: relative;
+  background-color: map-get($colors, section-bg-color);
+  padding-top: 104px;
+
+  &__article{
+    gap: 92px;
+  }
+  &__info{
+
+    h6{
+      @extend %h6;
+      margin-bottom: 20px;
+    }
+    h3{
+      @include title(24px, 30px)
+    }
+  }
+  &__content{
+    margin-bottom: 128px;
+    position: relative;
+    gap: 67px;
+    padding: 63px 41px 64px 35px;
+    border: 1px solid #D8E3FE;
+    background-color: map-get($colors, color-white);
+    box-shadow: 0 15px 50px #EFF4FF;
+    max-width: 958px;
+    width: 100%;
+  }
+  &__col-left {
+    position: relative;
+    width: 50%;
+    gap: 12px;
+
+    & .blog__img-lg {
+      width: calc(100% / 3 * 2);
+      display: inline-block;
+      height: 267px;
+      @extend %background-img;
+      position: relative;
+    }
+  }
+
+  &__white-box-lg{
+    @extend %cursor_glass;
+    top: 40%;
+    left: 40%;
+  }
+
+  &__img-glass{
+    width: 17px;
+    height: 17px;
+  }
+
+  &__illustrations{
+    width: calc(100% / 3 - 8px);
+    gap: 14px;
+  }
+
+  & .blog__img-sm {
+    display: inline-block;
+    width: 127px ;
+    height: 127px;
+    @extend %background-img;
+    position: relative;
+  }
+
+  &__white-box-top{
+    @extend %cursor_glass;
+    transform: translate(30px, 33px);
+  }
+  &__white-box-bottom{
+    @extend %cursor_glass;
+    transform: translate(34px, 32px);
+  }
+  & .blog__img-lg:hover .blog__white-box-lg{
+    @extend %blog-img-hover;
+  }
+  & .blog__img-sm:hover .blog__white-box-top{
+    @extend %blog-img-hover;
+  }
+  & .blog__img-sm:hover .blog__white-box-bottom{
+    @extend %blog-img-hover;
+  }
+
+
+
+  &__col-right{
+    width:50%;
+    gap: 35px;
+    h2{
+      @include title(map-get($font_sizes, font-size_lg), 45px);
+      @extend %font-quicksand-regular;
+    }
+    p{
+      line-height: 27px;
+      font-size: 14px;
+      max-width: 408px;
+      width: 100%;
+    }
+    .blog__read-now{
+      padding: 13px 23px;
+    }
+    .blog__add{
+      @extend .link-unstyled;
+      @extend %font-quicksand-bold;
+      font-size: 13px;
+      line-height: 16px;
+      color: #A6B6DA;
+      padding: 13px 8px;
+      &:hover {
+        @extend %btn-hover;
+      }
+      &:active {
+        @extend %btn-active;
+      }
+    }
+  }
+  & .blog__arrows-left{
+    @extend %blog-arrow;
+    left: 250px;
+  }
+  & .blog__arrows-right{
+    @extend %blog-arrow;
+    right: 250px;
+  }
+
+  &__dots{
+    bottom: 100px;
+  }
+}

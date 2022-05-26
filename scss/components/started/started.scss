@@ -1,0 +1,75 @@
+.started{
+
+  color: map-get($colors, color-white);
+  padding: 90px 0;
+  background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+  z-index: 1;
+  position: relative;
+  min-height: 447px;
+
+  &:before{
+    @extend %before-after;
+    background-size: cover;
+    width: 100%;
+    background-image: url('../assets/img/started.svg');
+    z-index: -1;
+    top: 0;
+    min-height: 319px;
+  }
+
+  &__content{
+    gap: 28px;
+  }
+  &__tittle{
+    max-width: 712px;
+    width:100%;
+    gap: 28px;
+  }
+  h6{
+    @extend %h6;
+    color: map-get($colors, color-white);
+  }
+  h2 {
+    @extend %font-quicksand-light;
+    font-size: map-get($font_sizes, font-size_xlg);
+    line-height: 60px;
+  }
+  & .started__color-text {
+    @include title( map-get($font_sizes, font-size_xlg), 60px);
+    color: map-get($colors, color-white);
+  }
+  &__button-left{
+    color: #565F82;
+    background: map-get($colors, color-white);
+    box-shadow: 0 5px 15px #6480E8;
+    font-size: 13px;
+    @extend %font-quicksand-bold;
+    padding: 13px 23px;
+    line-height: 17px;
+    border-radius: 2px;
+    &:hover{
+      transition: $transition;
+      @extend %started-button-right;
+    }
+    &:active {
+      @extend %started-btn-active;
+    }
+  }
+  &__button-right{
+    color: #C7D3FF;
+    border: 1px solid #A0B4FF;
+    background-color: #6888FF;
+    @extend %font-quicksand-bold;
+    font-size: 13px;
+    padding: 12px 8px;
+    line-height: 16px;
+    border-radius: 2px;
+    &:hover{
+      transition: $transition;
+      @extend %started-button-left;
+    }
+    &:active {
+      @extend %started-btn-active;
+    }
+  }
+}

@@ -47,3 +47,15 @@
   font-size: $font_size;
   line-height: $line-height;
 }
+
+@mixin feature-before-after($top, $width){
+  @extend %feature-before-after;
+  top: $top;
+  width: $width;
+}
+
+@mixin description-font-size14($line-height, $color){
+  @extend %description-font-size14;
+  color: $color;
+  line-height: $line-height;
+}

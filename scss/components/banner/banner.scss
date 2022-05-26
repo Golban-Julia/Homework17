@@ -44,7 +44,7 @@
     }
 
     h1 {
-      @include title( map-get($font_sizes, font-size_xlg), 60px)
+      @include title( map-get($font_sizes, font-size_xlg), 60px);
       }
       & .banner__color-text {
         @extend %font-quicksand-light;
@@ -80,14 +80,4 @@
     }
   }
 
-  &__dots {
-   @extend %dots;
-  }
-
-  &__dot {
-    @extend %dot;
-    &-active {
-      background-color: #5283FF;
-    }
-  }
 }

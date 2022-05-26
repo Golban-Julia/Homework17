@@ -1,0 +1,51 @@
+.newsletter{
+  border-bottom: $section-border-bottom;
+  padding: 119px 0;
+
+  &__content{
+    gap: 80px;
+  }
+  &__tittle{
+    h4{
+      @extend %font-quicksand-bold;
+      font-size: map-get($font_sizes, font-size_sm);
+      line-height: 22px;
+      color: map-get($colors, main-text-color);
+      margin-bottom: 18px;
+    }
+    p{
+      max-width: 330px;
+      width: 100%;
+      @include description-font-size14(26px, map-get($colors, main-font-color) )
+    }
+  }
+  &__button{
+    gap: 14px;
+    & input{
+      @extend %newsletter-btn;
+      padding: 21px 113px 20px 23px;
+      background-color: #EFEFF7;
+      border: 1px solid #EFEFF7;
+      border-radius: 5px;
+    }
+    & input::-webkit-input-placeholder{
+      color: #7A85AD;
+    }
+
+    & .newsletter__btn{
+      @extend %font-quicksand-bold;
+      color: map-get($colors, color-white);
+      background-color: #4D6CE1;
+      border-radius: 5px;
+      border: 1px solid #4D6CE1;
+      padding: 14px 60px;
+
+      &:hover {
+        @extend %btn-hover;
+      }
+      &:active {
+        @extend %btn-active;
+      }
+    }
+  }
+}

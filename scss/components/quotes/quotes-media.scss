@@ -1,0 +1,62 @@
+.quotes{
+  @include larger_screen(min){
+    &__col-right {
+      &:before{
+        left: -90px;
+      }
+    }
+  }
+
+  @include larger_screen(max){
+    &__content{
+      gap: 0;
+    }
+    &__col-left{
+      width: 40%;
+      padding-left: 0;
+    }
+    &__col-right {
+      width: 60%;
+      &__col-right {
+        &:before{
+          left: 80px;
+        }
+      }
+    }
+  }
+
+
+  @include desktop(){
+    &__content{
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &__col-left{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+    &__col-right {
+      width: 100%;
+      margin-bottom: 120px;
+      &:before{
+        left: 100px;
+      }
+    }
+  }
+
+  @include laptop(){
+    &__col-right {
+      &:before{
+        left: 140px;
+      }
+    }
+  }
+  @include tablet(){
+    &__col-right {
+      &:before{
+       display: none;
+      }
+    }
+  }
+}

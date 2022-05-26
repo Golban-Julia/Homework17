@@ -1,6 +1,6 @@
 .stats{
   @extend %font-quicksand-medium;
-  font-size: map-get($font_sizes, font-size_md);
+  font-size: map-get($font_sizes, font-size_sm);
   $col-padding: 90px;
   overflow-x: hidden;
   color: white;
@@ -15,11 +15,9 @@
       z-index: 10;
     }
     &:before {
-      content: '';
-      display: block;
+      @extend %before-after;
       width: 100vw;
       height: 100%;
-      position: absolute;
       top: 0;
     }
   }

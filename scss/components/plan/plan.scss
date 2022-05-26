@@ -1,6 +1,5 @@
 .plan{
 
-
   $plan-btn-bg-color:#4C85FF;
   $plan-bg-color-btn: #ADB4D2;
 
@@ -34,6 +33,7 @@
       @include plan-btn(map-get($colors, color-white), $plan-btn-bg-color, $plan-btn-bg-color);
       position: relative;
       padding: 12px 28px;
+      border-radius: 2px;
       &:hover {
         color: $plan-bg-color-btn;
         background-color: map-get($colors, color-white);
@@ -48,6 +48,7 @@
     & .plan__button-see{
       @include plan-btn($plan-bg-color-btn, map-get($colors, color-white), #D1D1E4);
       padding: 12px 22px;
+      border-radius: 2px;
       &:hover {
         color: map-get($colors, color-white);
         background-color: $plan-btn-bg-color;

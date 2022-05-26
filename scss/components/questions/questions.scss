@@ -1,0 +1,89 @@
+.questions{
+  padding: 175px 0;
+
+  &__content{
+    gap: 67px;
+  }
+  &__tittle{
+    h6{
+      @extend %h6;
+      margin-bottom: 20px;
+    }
+    h3{
+      @include title(24px, 30px)
+    }
+  }
+  &__accord{
+    max-width: 745px;
+    width: 100%;
+    margin: 0 auto;
+
+    input{
+      display: none;
+    }
+    label{
+      position: relative;
+      cursor: pointer;
+      display: block;
+      border-bottom: $section-border-bottom;
+      @extend %font-quicksand-medium;
+      color: #8E96B7;
+      line-height: 19px;
+      letter-spacing: $letter-spacing;
+      padding: 15px 44px;
+    }
+    label:hover{
+      color: #495274;
+    }
+    label:before{
+      content: '\276F';
+      transform: rotate(90deg);
+      float: left;
+      left:10px;
+      position: absolute;
+    }
+    input:checked + label {
+      border-bottom: none;
+      color: #495274;
+    }
+    input:checked + label:before {
+      transition: transform .35s;
+      transform: rotate(270deg);
+    }
+     & p {
+      margin: 0 0 10px;
+      max-width: 391px;
+    }
+  }
+  & .questions__accord-body {
+    width: calc(100% - 90px);
+    margin: 0 auto;
+    height: 0;
+    gap: 38px;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    @include description-font-size14(27px, map-get($colors, main-font-color));
+
+    a{
+      @extend %font-quicksand-medium;
+      font-size: 13px;
+      line-height: 16px;
+      color: #7382A3;
+      padding: 13px 29px;
+      background-color: #E8ECF4;
+      text-align: center;
+      height: 100%;
+      &:hover {
+        @extend %btn-hover;
+      }
+      &:active{
+        @extend %btn-active;
+      }
+    }
+  }
+  & input:checked + label + .questions__accord-body {
+    height: auto;
+    margin-top: -5px;
+    padding: 10px 5px 10px;
+  }
+}

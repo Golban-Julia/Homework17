@@ -1,0 +1,57 @@
+.footer{
+  padding: 93px 0;
+
+  &__content{
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  &__logo {
+    a {
+      @include a-style('bg', map-get($colors, accent-color), black, map-get($colors, color-btn-active));
+      text-decoration: none;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+    }
+  }
+  &__col-left{
+    width: 50%;
+    gap:73px;
+  }
+  &__menu{
+    gap: 42px;
+    a{
+      @extend %foter-header-text;
+      text-decoration: none;
+      @include a-style('color', map-get($colors, text-color), map-get($colors, accent-color), map-get($colors, color-btn-active));
+    }
+
+  }
+
+
+
+
+  &__col-right{
+    width: 50%;
+    gap: 44px;
+  }
+  &__social{
+    gap: 38px;
+  }
+  & path:hover{
+    transition: $transition;
+    fill: #6188FF;
+  }
+  & path:active{
+    transition: $transition;
+    fill: map-get($colors, color-btn-active);
+  }
+
+  &__copyright{
+    @extend %foter-header-text;
+    color: #AEB8D0;
+    margin-left: 100px;
+  }
+
+}

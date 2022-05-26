@@ -1,0 +1,16 @@
+.newsletter{
+  @include desktop{
+    &__content{
+      flex-direction: column;
+    }
+    &__tittle{
+      text-align: center;
+    }
+  }
+  @include mobile-small{
+    &__button{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

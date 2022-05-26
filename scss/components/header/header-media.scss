@@ -17,6 +17,20 @@
       }
     }
   }
+  @include desktop(){
+    &__menu {
+      gap: 10px;
+    }
+  }
+  @include laptop(){
+    &__main-menu ul {
+      gap: 15px;
+    }
+    &__social {
+      gap: 19px;
+    }
+
+  }
 
   @include tablet(){
     &__wrapper{

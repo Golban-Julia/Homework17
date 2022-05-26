@@ -1,0 +1,76 @@
+.quotes{
+  border-bottom: $section-border-bottom;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+  padding: 109px 0;
+
+  &__content{
+    gap: 20px;
+  }
+  &__col-left{
+    gap: 25px;
+    width: 50%;
+    padding-left: 150px;
+    margin-top: 37px;
+  }
+  & h6 {
+    @extend %h6;
+  }
+  & h2{
+    max-width: 339px;
+    width: 100%;
+    @include title(map-get($font_sizes, font-size_lg), 45px)
+  }
+  & p{
+    @extend %font-open-sans-semiBold;
+    max-width: 339px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 23px;
+    color: #A4ABC8;
+    letter-spacing: $letter-spacing;
+  }
+  &__col-right{
+    width: 50%;
+    filter: drop-shadow(0px 15px 50px #D4DCF1);
+    background-color: map-get($colors, color-white);
+    border: 1px solid #D8E3FE;
+    padding: 41px 71px 53px 69px;
+    position: relative;
+    margin-bottom: 80px;
+
+    &:before {
+      @extend %before-after;
+      width: 100vw;
+      background-image: url('../assets/img/Quotes-2.svg');
+      height: 313px;
+      background-repeat: no-repeat;
+      left: 5px;
+      background-size: contain;
+      background-position: center;
+      top: -50px;
+    }
+
+    & blockquote{
+      max-width: 283px;
+      @include description-font-size14(24px, #676F95);
+    }
+
+    & img{
+      position: absolute;
+      bottom: -31px;
+      right: 43%;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+    }
+  }
+  &__img{
+    max-width: 428px;
+    width: 100%;
+  }
+  &__dots{
+    position: absolute;
+    bottom: -85px;
+  }
+}

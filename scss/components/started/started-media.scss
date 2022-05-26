@@ -1,0 +1,14 @@
+.started{
+  @include mobile-small(){
+    &__button{
+      flex-wrap: wrap;
+      gap: 10px;
+      &-left{
+        width: 100%;
+      }
+      &-right{
+        width: 100%;
+      }
+    }
+  }
+}
